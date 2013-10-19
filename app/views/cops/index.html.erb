@@ -1,0 +1,28 @@
+<h1>Listing cops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cops.each do |cop| %>
+      <tr>
+        <td><%= cop.name %></td>
+        <td><%= link_to 'Show', cop %></td>
+        <td><%= link_to 'Edit', edit_cop_path(cop) %></td>
+        <td><%= link_to 'Destroy', cop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cop', new_cop_path %><br><br>
+<%= link_to 'Show All Tickets', tickets_path %>

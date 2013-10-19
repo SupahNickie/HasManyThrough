@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Violation:</strong>
+  <%= @ticket.violation %>
+</p>
+
+<p>
+  <strong>Issuing Officer:</strong>
+  <%= @ticket.cop.name %>
+</p>
+
+<p>
+  <strong>Victim Name:</strong>
+  <%= @ticket.victim.name %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cop.name %>
+</p>
+
+<p>
+  <strong>Cop ID Number:</strong>
+  <%= @cop.id %>
+</p>
+
+<%= link_to 'Edit', edit_cop_path(@cop) %> |
+<%= link_to 'Back', cops_path %>
